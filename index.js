@@ -13,11 +13,13 @@ const userRoutes= require("./routers/user")
 env.config();
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI;
+const jobRouter= require("./routers/job");
 
 app.get("/", (req, res) => {
   res.send("hello");
 });
 app.use("/api/user", userRoutes);
+app.use("/api/job", jobRouter);
 
 app.listen(PORT, () => {
   console.log("server is runing");
