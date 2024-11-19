@@ -17,7 +17,6 @@ const isLoggedin=(req, res, next)=>{
     else{
         res.status(401).json({message:"No token"});
     }
-    // return res.json();
 
 }
 

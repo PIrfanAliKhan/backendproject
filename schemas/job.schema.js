@@ -18,7 +18,7 @@ const schema= mongoose.Schema({
     },
     userid:{
         type: mongoose.Schema.Types.ObjectId,
-        ref:"user",
+        ref:"users",
         require: true,
     },
 });
